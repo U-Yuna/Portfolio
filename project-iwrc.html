@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligent Water Rocket Competition - 上村悠菜</title>
+    <meta name="description" content="東海大学主催ペットボトルロケットコンペティション総合優勝プロジェクト">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content -->
+    <main>
+        <section class="page-section">
+            <div class="container">
+                <!-- Breadcrumb -->
+                <nav class="breadcrumb">
+                    <a href="projects.html" class="breadcrumb-link">作品一覧</a>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-current">IWRC 2024</span>
+                </nav>
+
+                <!-- Project Header -->
+                <div class="project-header-section">
+                    <div class="project-hero-image">
+                        <img src="images/IWRC.JPG" alt="IWRCプロジェクト" class="project-hero-img">
+                        <div class="project-status-badge">総合優勝</div>
+                    </div>
+                    <div class="project-hero-content">
+                        <h1 class="project-hero-title">Intelligent Water Rocket Competition 2024</h1>
+                        <p class="project-hero-subtitle">東海大学主催-マイコン搭載ペットボトルロケットによるSTEM教育イベント</p>
+                        <div class="project-meta">
+                            <div class="project-meta-item">
+                                <span class="meta-label">開発期間</span>
+                                <span class="meta-value">2024年8月〜11月</span>
+                            </div>
+                            <div class="project-meta-item">
+                                <span class="meta-label">チーム規模</span>
+                                <span class="meta-value">3名</span>
+                            </div>
+                            <div class="project-meta-item">
+                                <span class="meta-label">担当領域</span>
+                                <span class="meta-value">プロジェクトマネージャー・電気系統設計</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Content -->
+                <div class="project-content-section">
+                    <div class="project-section">
+                        <h2 class="project-section-title">プロジェクト概要</h2>
+                        <div class="project-text">
+                            <p>Intelligent Water Rocket Competition（IWRC）は、東海大学が主催するペットボトルロケットの技術コンペティションです。単純な飛距離だけでなく、IoT技術を活用した「知能」を持つロケットの開発が求められる革新的な大会です。</p>
+                            <p>私たちのチームは、Raspberry Piとセンサー技術を組み合わせて、飛行中のデータ収集と分析、着地点予測機能を持つ高度なロケットシステムを開発しました。プロジェクトマネージャーとして全体の進行管理を担当し、電気系統の設計・実装にも深く関わりました。</p>
+                        </div>
+                    </div>
+
+                    <div class="project-section">
+                        <h2 class="project-section-title">システム構成</h2>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <h3 class="feature-title">飛行データ収集システム</h3>
+                                <p class="feature-description">ペイロード部に積んでいるRaspberry Piに加速度を検知させ、JSON形式でラズパイ内に保存する</p>
+                            </div>
+                            <div class="feature-item">
+                                <h3 class="feature-title">自動パラシュート展開機構</h3>
+                                <p class="feature-description">一定以上の動きを検知するとサーボモーターによって爪が外れる仕組みになっており、ペイロードとタンクが分離するとともに自動的にパラシュートも展開する</p>
+                            </div>
+                            <div class="feature-item">
+                                <h3 class="feature-title">衛星の放出</h3>
+                                <p class="feature-description">衛星としてカメラモジュールをロケットの分離とともに放出させる</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-section">
+                        <h2 class="project-section-title">使用技術</h2>
+                        <div class="tech-stack">
+                            <div class="tech-category">
+                                <h3 class="tech-category-title">ハードウェア</h3>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Raspberry Pi</span>
+                                    <span class="tech-tag">加速度センサー</span>
+                                    <span class="tech-tag">カメラモジュール</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h3 class="tech-category-title">ソフトウェア</h3>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Python</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-section">
+                        <h2 class="project-section-title">担当した作業</h2>
+                        <div class="work-list">
+                            <div class="work-item">
+                                <h3 class="work-title">プロジェクトマネジメント</h3>
+                                <p class="work-description">スケジュール管理、タスク分担、チーム間の連携調整を担当</p>
+                            </div>
+                            <div class="work-item">
+                                <h3 class="work-title">ロケット本体の作成</h3>
+                                <p class="work-description">ペットボトルを切り、３Dプリンターで作成した部品と繋げる作業を行なった</p>
+                            </div>
+                            <div class="work-item">
+                                <h3 class="work-title">電気系統設計</h3>
+                                <p class="work-description">センサー配置、配線設計、電源管理システムの構築</p>
+                            </div>
+                            <div class="work-item">
+                                <h3 class="work-title">テスト・検証</h3>
+                                <p class="work-description">システム全体の動作確認と性能最適化</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-section">
+                        <h2 class="project-section-title">成果と学び</h2>
+                        <div class="project-text">
+                            <p><strong>総合優勝の達成：</strong>技術力だけでなく、難しい課題に取り組もうとする姿勢や、チームワークを含めた総合評価で1位を獲得することができました。</p>
+                            <p><strong>プロジェクトマネジメントスキル：</strong>3人チームのマネージャーとして、スケジュール管理、リスク管理、チーム間調整の重要性を実践的に学びました。</p>
+                            <p><strong>問題解決能力の向上：</strong>制約の多い環境での開発を通じて、創意工夫による問題解決能力が大きく向上しました。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div class="project-navigation">
+                    <a href="project-traubling.html" class="nav-button nav-back">
+                        <svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 12H5M12 19l-7-7 7-7"/>
+                        </svg>
+                        前のプロジェクト
+                    </a>
+                    <a href="projects.html" class="nav-button nav-next">
+                        作品一覧に戻る
+                        <svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript -->
+    <script src="js/components.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ - 上村悠菜</title>
+    <meta name="description" content="上村悠菜へのお問い合わせフォーム">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    
+</head>
+<body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content -->
+    <main>
+        <section class="page-section">
+            <div class="container">
+                <h1 class="page-title">Contact</h1>
+                
+                <div class="contact-detail-grid">
+                    <div class="contact-info-section">
+                        <div class="profile-section">
+                            <h2 class="profile-section-title">Get in Touch</h2>
+                            <div class="profile-text">
+                                <p>お仕事のご相談やご質問がございましたら、お気軽にお声がけください。</p>
+                                <p>通常24時間以内にご返信いたします。</p>
+                            </div>
+                        </div>
+
+                        <div class="profile-section">
+                            <h2 class="profile-section-title">Email</h2>
+                            <p class="profile-text">
+                                <a href="mailto:contact@example.com" class="email-link">yuna.info630@gmail.com</a>
+                            </p>
+                        </div>
+
+                        <div class="profile-section">
+                            <h2 class="profile-section-title">Social</h2>
+                            <div class="social-links">
+                                <a href="https://github.com/U-Yuna" class="social-link" target="_blank" aria-label="GitHub">
+                                  <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://x.com/yunayuna2322" class="social-link" target="_blank" aria-label="X (Twitter)">
+                                  <i class="fab fa-x-twitter"></i>
+                                </a>
+                                <a href="https://instagram.com/yunayuna2322" class="social-link" target="_blank" aria-label="Instagram">
+                                  <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="profile-section">
+                            <h2 class="profile-section-title">Response Time</h2>
+                            <div class="response-info">
+                                    <span class="response-label">平日　24時間以内</span>
+                                    <span class="response-label">週末　48時間以内</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-section">
+                        <!-- Success Message -->
+                        <div id="success-message" class="message success-message" style="display: none;">
+                            <div class="message-icon">✓</div>
+                            <div class="message-content">
+                                <h3>送信完了</h3>
+                                <p>お問い合わせありがとうございます。24時間以内にご返信いたします。</p>
+                            </div>
+                        </div>
+
+                        <!-- Error Message -->
+                        <div id="error-message" class="message error-message" style="display: none;">
+                            <div class="message-icon">⚠</div>
+                            <div class="message-content">
+                                <h3>送信エラー</h3>
+                                <p>申し訳ございません。送信に失敗しました。しばらく時間をおいて再度お試しください。</p>
+                            </div>
+                        </div>
+
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="user_name" class="form-label">お名前 <span class="required">*</span></label>
+                                <input type="text" id="user_name" name="user_name" class="form-input" placeholder="山田太郎" required>
+                                <div class="form-error" id="name-error"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="user_email" class="form-label">メールアドレス <span class="required">*</span></label>
+                                <input type="email" id="user_email" name="user_email" class="form-input" placeholder="example@email.com" required>
+                                <div class="form-error" id="email-error"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" class="form-label">件名</label>
+                                <input type="text" id="subject" name="subject" class="form-input" placeholder="お問い合わせの件名">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">メッセージ <span class="required">*</span></label>
+                                <textarea id="message" name="message" class="form-textarea" placeholder="お問い合わせ内容をご記入ください" required></textarea>
+                                <div class="form-error" id="message-error"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="privacy_agree" name="privacy_agree" required>
+                                    <span class="checkmark"></span>
+                                    <span class="checkbox-text">
+                                        <a href="privacy-policy.html" class="privacy-link" target="_blank">プライバシーポリシー</a>に同意します <span class="required">*</span>
+                                    </span>
+                                </label>
+                                <div class="form-error" id="privacy-error"></div>
+                            </div>
+                            
+                            <button type="submit" class="form-submit" id="submit-btn">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loading" style="display: none;">
+                                    <span class="loading-spinner"></span>
+                                    送信中...
+                                </span>
+                            </button>
+
+                            <div class="form-note">
+                                <p>※ 送信がうまくいかない場合は、直接 <a href="mailto:yuna.info630@gmail.com" class="email-link">yuna.info630@gmail.com</a> までご連絡ください。</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript -->
+    <script src="js/components.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
