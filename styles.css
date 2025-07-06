@@ -998,7 +998,7 @@ main {
 
   .hero-content {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1rem;
     text-align: center;
   }
 
@@ -1064,6 +1064,14 @@ main {
 
   .news-description {
     font-size: 0.875rem;
+  }
+
+  .slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 16rem; /* .hero-image-container と同じ高さ */
+    overflow: hidden; /* これでスライドのはみ出しを隠す */
+    border-radius: 0.5rem; /* 角丸も必要なら追加 */
   }
 }
 
